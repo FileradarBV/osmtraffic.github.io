@@ -354,9 +354,9 @@ var $mcj = jQuery.noConflict(true);</script>
 
 <script type="text/javascript">
     $(function() {
-        setTimeout(function() {
+        setInterval(function() {
             $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
-                console.log(res);
+                console.log('Amount of extractions done: ' + res.nExtractions);
             });
         }, 4000);
     });
