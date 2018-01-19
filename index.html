@@ -352,6 +352,17 @@ var $mcj = jQuery.noConflict(true);</script>
 <script src="js/smooth-scroll.min.js"></script>
 <script src="js/scripts.js"></script>
 
+<script type="text/javascript">
+    $(function() {
+        setTimeout(function() {
+            $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
+                console.log(res);
+            });
+        }, 4000);
+    });
+</script>
+
+
 </body>
 
 </html>
