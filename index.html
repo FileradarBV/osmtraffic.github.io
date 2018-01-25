@@ -113,7 +113,9 @@
                             <a href="index.html" style="float: left;">
                                 <img class="logo logo-dark" alt="logo" src="img/logo.png"/>
                             </a>
-                            <span style="display: block; float: left; padding-top: 6px; padding-left: 10px;"><h5>OSM: Traffic – Retrieve data from OpenStreetMap in usable formats</h5>
+                            <span style="display: block; float: left; font-weight: bold; padding-top: 6px; padding-left: 10px;">
+                                OSM: Traffic – Retrieve data from OpenStreetMap in usable formats
+                            </span>
                         </div>
                         <!--end module-->
                     </div>
@@ -125,10 +127,9 @@
                                class="btn btn--sm type--uppercase btn--secondary pull-left"> <span
                                     class="btn__text">Try it now, it's free</span> </a>
 
-
-                            <a href="http://fileradar.nl/index.html#contact" target=_blank
-                               class="btn btn--sm type--uppercase btn--primary pull-right"> <span
-                                    class="btn__text">Contact Us</span> </a>
+                            <span style="display: block; float: right; padding-top: 6px; padding-left: 10px;">
+                                Extractions made so far: <span id="extraction-counter" style="font-weight: bold;">loading...</span>!
+                            </span>
 
 
                         </div>
@@ -388,9 +389,36 @@ var $mcj = jQuery.noConflict(true);</script>
 
 <script type="text/javascript">
     $(function() {
+
+        function number_format (number, decimals, decPoint, thousandsSep) {
+          number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
+          var n = !isFinite(+number) ? 0 : +number
+          var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+          var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
+          var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
+          var s = ''
+
+          var toFixedFix = function (n, prec) {
+            var k = Math.pow(10, prec)
+            return '' + (Math.round(n * k) / k)
+              .toFixed(prec)
+          };
+
+          s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
+          if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+          }
+          if ((s[1] || '').length < prec) {
+            s[1] = s[1] || ''
+            s[1] += new Array(prec - s[1].length + 1).join('0')
+          }
+
+          return s.join(dec)
+        }
+
         setInterval(function() {
             $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
-                console.log('Amount of extractions done: ' + res.nExtractions);
+                $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
             });
         }, 4000);
     });
