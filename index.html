@@ -416,11 +416,15 @@ var $mcj = jQuery.noConflict(true);</script>
           return s.join(dec)
         }
 
-        setInterval(function() {
+        function updateExtractions() {
             $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
                 $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
             });
-        }, 4000);
+        }
+
+        updateExtractions();
+
+        setInterval(updateExtractions, 4000);
     });
 </script>
 
