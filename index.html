@@ -89,117 +89,127 @@
 
 </head>
 <body data-smooth-scroll-offset="77">
-<div class="nav-container bg--secondary">
-    <div>
-        <div class="bar bar--sm visible-xs ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-3 col-sm-2">
-                        <!--a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/logo-light.png"> </a-->
-                    </div>
-                    <div class="col-xs-9 col-sm-10 text-right">
-                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i
-                                class="icon icon--sm stack-interface stack-menu"></i> </a>
+    <div class="nav-container bg--secondary">
+        <div>
+            <div class="bar bar--sm visible-xs ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2">
+                            <!--a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/logo-light.png"> </a-->
+                        </div>
+                        <div class="col-xs-9 col-sm-10 text-right">
+                            <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i
+                                    class="icon icon--sm stack-interface stack-menu"></i> </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <nav id="menu1" class="bar bar-1 hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="bar__module">
+                                <a href="index.html" style="float: left;">
+                                    <img class="logo logo-dark" alt="logo" src="img/logo.png"/>
+                                </a>
+                                <span style="display: block; float: left; font-weight: bold; padding-top: 6px; padding-left: 10px;">
+                                    OSM: Traffic – Retrieve data from OpenStreetMap in usable formats
+                                </span>
+                            </div>
+                            <!--end module-->
+                        </div>
+                        <div class="col-xs-6">
+
+                            <div class="bar__module">
+
+                                <a target=_blank
+                                   class="btn btn--sm type--uppercase btn--secondary pull-left"> <span
+                                        class="btn__text">Try it now, it's free</span> </a>
+
+                                <span style="display: block; float: right; padding-top: 6px; padding-left: 10px;">
+                                    Extractions made so far: <span id="extraction-counter" style="font-weight: bold;">loading...</span>!
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-
-        <nav id="menu1" class="bar bar-1 hidden-xs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="bar__module">
-                            <a href="index.html" style="float: left;">
-                                <img class="logo logo-dark" alt="logo" src="img/logo.png"/>
-                            </a>
-                            <span style="display: block; float: left; font-weight: bold; padding-top: 6px; padding-left: 10px;">
-                                OSM: Traffic – Retrieve data from OpenStreetMap in usable formats
-                            </span>
-                        </div>
-                        <!--end module-->
-                    </div>
-                    <div class="col-xs-6">
-
-                        <div class="bar__module">
-
-                            <a target=_blank
-                               class="btn btn--sm type--uppercase btn--secondary pull-left"> <span
-                                    class="btn__text">Try it now, it's free</span> </a>
-
-                            <span style="display: block; float: right; padding-top: 6px; padding-left: 10px;">
-                                Extractions made so far: <span id="extraction-counter" style="font-weight: bold;">loading...</span>!
-                            </span>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
     </div>
-</div>
-<div class="main-container">
-    <section class="bg--secondary cover unpad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
+    <div class="main-container">
+        <section class="bg--secondary cover unpad">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
 
-                    <iframe src="http://acc.dantesoftware.com" style="border-style: solid; border-width:1px" height=800>
-                        <p>Your browser does not support iframes.</p>
-                    </iframe>
+                        <iframe src="http://acc.dantesoftware.com" style="border-style: solid; border-width:1px" height=800>
+                            <p>Your browser does not support iframes.</p>
+                        </iframe>
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
-    </section>
-    <section class="feature-large bg--dark">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-sm-6">
-                    <div class="switchable__text">
-                        <h2>From lines to links</h2>
-                        <p class="lead">Explore any area on the Globe and save it as a link node graph for traffic
-                            engineering, transport planning, etc. projects. </p>
-                        <p class="lead">Save it into easily accessible format such as GeoJson, Shapefile, XML. </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="video-cover border--round">
-                        <div class="background-image-holder">
-                            <img alt="image" src="img/maps.png" />
+        </section>
+                <div class="notification pos-right pos-top col-sm-4 col-md-3" data-animation="from-right" data-autoshow="400">
+                    <div class="boxed boxed--border border--round box-shadow">
+                        <div class="text-block">
+                            <h5>Yepp, we also do the cookie thing.</h5>
+                            <p>
+                                We're trying to learn what works for you the best. Mail us your feedback and so that we can remove analytics and this annoying warning here. 
+                            </p>
                         </div>
-                        <div class="video-play-icon"></div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-h3Yo4oGRDo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+        <section class="feature-large bg--dark">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="switchable__text">
+                            <h2>From lines to links</h2>
+                            <p class="lead">Explore any area on the Globe and save it as a link node graph for traffic
+                                engineering, transport planning, etc. projects. </p>
+                            <p class="lead">Save it into easily accessible format such as GeoJson, Shapefile, XML. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="video-cover border--round">
+                            <div class="background-image-holder">
+                                <img alt="image" src="img/maps.png" />
+                            </div>
+                            <div class="video-play-icon"></div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-h3Yo4oGRDo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+                        <ul class="slides">
+
+                            <li class="col-sm-4 col-xs-1"><img alt="Image" class="image--xs" src="img/Slice 2.png"></li>
+                            <li class="col-sm-3 col-xs-6"><img alt="Image" class="image--xs" src="img/Slice 3.png"></li>
+                            <li class="col-sm-4 col-xs-1"><img alt="Image" class="image--xs" src="img/Slice 5.png"></li>
+
+                            <li class="col-sm-3 col-xs-6"><img alt="Image" class="image--xs" src="img/Slice 4.png"></li>
+
+
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
-                    <ul class="slides">
-
-                        <li class="col-sm-4 col-xs-1"><img alt="Image" class="image--xs" src="img/Slice 2.png"></li>
-                        <li class="col-sm-3 col-xs-6"><img alt="Image" class="image--xs" src="img/Slice 3.png"></li>
-                        <li class="col-sm-4 col-xs-1"><img alt="Image" class="image--xs" src="img/Slice 5.png"></li>
-
-                        <li class="col-sm-3 col-xs-6"><img alt="Image" class="image--xs" src="img/Slice 4.png"></li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
   <!--   <section id="price">
         <div class="container">
             <div class="row">
@@ -364,69 +374,69 @@
         </div>
     </footer>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>(function ($) {
-    window.fnames = new Array();
-    window.ftypes = new Array();
-    fnames[0] = 'EMAIL';
-    ftypes[0] = 'email';
-    fnames[1] = 'FNAME';
-    ftypes[1] = 'text';
-    fnames[2] = 'LNAME';
-    ftypes[2] = 'text';
-    fnames[3] = 'BIRTHDAY';
-    ftypes[3] = 'birthday';
-}(jQuery));
-var $mcj = jQuery.noConflict(true);</script>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>(function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'BIRTHDAY';
+            ftypes[3] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);</script>
 
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/flickity.min.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/granim.min.js"></script>
-<script src="js/twitterfetcher.min.js"></script>
-<script src="js/smooth-scroll.min.js"></script>
-<script src="js/scripts.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/flickity.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/granim.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
 
-<script type="text/javascript">
-    $(function() {
+        <script type="text/javascript">
+            $(function() {
 
-        function number_format (number, decimals, decPoint, thousandsSep) {
-          number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
-          var n = !isFinite(+number) ? 0 : +number
-          var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
-          var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
-          var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
-          var s = ''
+                function number_format (number, decimals, decPoint, thousandsSep) {
+                  number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
+                  var n = !isFinite(+number) ? 0 : +number
+                  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+                  var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
+                  var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
+                  var s = ''
 
-          var toFixedFix = function (n, prec) {
-            var k = Math.pow(10, prec)
-            return '' + (Math.round(n * k) / k)
-              .toFixed(prec)
-          };
+                  var toFixedFix = function (n, prec) {
+                    var k = Math.pow(10, prec)
+                    return '' + (Math.round(n * k) / k)
+                      .toFixed(prec)
+                  };
 
-          s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
-          if (s[0].length > 3) {
-            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
-          }
-          if ((s[1] || '').length < prec) {
-            s[1] = s[1] || ''
-            s[1] += new Array(prec - s[1].length + 1).join('0')
-          }
+                  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
+                  if (s[0].length > 3) {
+                    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+                  }
+                  if ((s[1] || '').length < prec) {
+                    s[1] = s[1] || ''
+                    s[1] += new Array(prec - s[1].length + 1).join('0')
+                  }
 
-          return s.join(dec)
-        }
+                  return s.join(dec)
+                }
 
-        function updateExtractions() {
-            $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
-                $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
+                function updateExtractions() {
+                    $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
+                        $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
+                    });
+                }
+
+                updateExtractions();
+
+                setInterval(updateExtractions, 4000);
             });
-        }
-
-        updateExtractions();
-
-        setInterval(updateExtractions, 4000);
-    });
-</script>
+        </script>
 
 
 </body>
