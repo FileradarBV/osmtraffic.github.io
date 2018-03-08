@@ -159,7 +159,7 @@
                         <div class="text-block">
                             <h5>Yepp, we also do the cookie thing.</h5>
                             <p>
-                                We're trying to learn what works for you the best. Mail us your feedback and so that we can remove analytics and this annoying warning here. 
+                                We're trying to learn what works for you the best. Mail us your feedback so that we can remove analytics and this annoying warning here. 
                             </p>
                         </div>
                     </div>
@@ -374,69 +374,69 @@
         </div>
     </footer>
 </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script type='text/javascript'>(function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
-            fnames[1] = 'FNAME';
-            ftypes[1] = 'text';
-            fnames[2] = 'LNAME';
-            ftypes[2] = 'text';
-            fnames[3] = 'BIRTHDAY';
-            ftypes[3] = 'birthday';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);</script>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>(function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+        fnames[3] = 'BIRTHDAY';
+        ftypes[3] = 'birthday';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);</script>
 
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/flickity.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/granim.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/scripts.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/flickity.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/granim.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
 
-        <script type="text/javascript">
-            $(function() {
+    <script type="text/javascript">
+        $(function() {
 
-                function number_format (number, decimals, decPoint, thousandsSep) {
-                  number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
-                  var n = !isFinite(+number) ? 0 : +number
-                  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
-                  var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
-                  var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
-                  var s = ''
+            function number_format (number, decimals, decPoint, thousandsSep) {
+              number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
+              var n = !isFinite(+number) ? 0 : +number
+              var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+              var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
+              var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
+              var s = ''
 
-                  var toFixedFix = function (n, prec) {
-                    var k = Math.pow(10, prec)
-                    return '' + (Math.round(n * k) / k)
-                      .toFixed(prec)
-                  };
+              var toFixedFix = function (n, prec) {
+                var k = Math.pow(10, prec)
+                return '' + (Math.round(n * k) / k)
+                  .toFixed(prec)
+              };
 
-                  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
-                  if (s[0].length > 3) {
-                    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
-                  }
-                  if ((s[1] || '').length < prec) {
-                    s[1] = s[1] || ''
-                    s[1] += new Array(prec - s[1].length + 1).join('0')
-                  }
+              s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
+              if (s[0].length > 3) {
+                s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+              }
+              if ((s[1] || '').length < prec) {
+                s[1] = s[1] || ''
+                s[1] += new Array(prec - s[1].length + 1).join('0')
+              }
 
-                  return s.join(dec)
-                }
+              return s.join(dec)
+            }
 
-                function updateExtractions() {
-                    $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
-                        $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
-                    });
-                }
+            function updateExtractions() {
+                $.get('http://acc.dantesoftware.com:12330/getStatus/d2c26b8c-4b02-4d27-818e-ea12d47c4412', function(res) {
+                    $("#extraction-counter").text(number_format(res.nExtractions, 0, '.', ','));
+                });
+            }
 
-                updateExtractions();
+            updateExtractions();
 
-                setInterval(updateExtractions, 4000);
-            });
-        </script>
+            setInterval(updateExtractions, 4000);
+        });
+    </script>
 
 
 </body>
